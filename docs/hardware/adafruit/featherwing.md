@@ -50,7 +50,10 @@ Check out Adafruit's [TFT Featherwing tutorial](https://learn.adafruit.com/adafr
 
 ## Backlight
 
-By default, the display is always on and at its maximum brightness. To control backlight dimming or sleeping, you need to solder the `LITE` pad on the TFT Featherwing to a PWM output pin on the Feather board (e.g., `GPIO 21` on the Adafruit HUZZAH32 - ESP32 Feather or `GPIO 37` on the Adafruit ESP32 Feather V2, as these are, respectively, the closest pins to the `LITE` pad).
+By default, the display is always on and at its maximum brightness. To control backlight dimming or sleeping, you need to solder the `LITE` pad on the TFT Featherwing to a PWM output pin on the Feather board (e.g., `GPIO 21` on the Adafruit HUZZAH32 - ESP32 Feather).
+
+!!! note "<i class='fa fa-info-circle'></i>&nbsp; Note" 
+    When using Adafruit ESP32 Feather V2 the 'corner' pin next to TX has changed from pin 21 to 37 and is also changed from a GPIO to input-only, which means it can not be used for the backlight. You can use e.g. `GPIO 26` instead.
 
 <div class="row justify-content-center">
   <a href="../images/featherwing35-backlight.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-8" data-title="Backlight Control" data-footer="Original image by altersis">
