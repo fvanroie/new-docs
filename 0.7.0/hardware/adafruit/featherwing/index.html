@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
@@ -4014,7 +4014,11 @@
 
 <p>Check out Adafruit's <a href="https://learn.adafruit.com/adafruit-2-4-tft-touch-screen-featherwing" target="_blank">TFT Featherwing tutorial</a> on <a href="https://learn.adafruit.com/" target="_blank">learn.adafruit.com</a> for detailed information and wiring diagrams.</p>
 <h2 id="backlight">Backlight<a class="headerlink" href="#backlight" title="Permanent link">~</a></h2>
-<p>By default, the display is always on and at its maximum brightness. To control backlight dimming or sleeping, you need to solder the <code>LITE</code> pad on the TFT Featherwing to a PWM output pin on the Feather board (e.g., <code>GPIO 21</code> on the Adafruit HUZZAH32 - ESP32 Feather or <code>GPIO 37</code> on the Adafruit ESP32 Feather V2, as these are, respectively, the closest pins to the <code>LITE</code> pad).</p>
+<p>By default, the display is always on and at its maximum brightness. To control backlight dimming or sleeping, you need to solder the <code>LITE</code> pad on the TFT Featherwing to a PWM output pin on the Feather board (e.g., <code>GPIO 21</code> on the Adafruit HUZZAH32 - ESP32 Feather).</p>
+<div class="admonition note">
+<p class="admonition-title"><i class='fa fa-info-circle'></i>&nbsp; Note</p>
+<p>When using Adafruit ESP32 Feather V2 the 'corner' pin next to TX has changed from pin 21 to 37 and is also changed from a GPIO to input-only, which means it can not be used for the backlight. You can use e.g. <code>GPIO 26</code> instead.</p>
+</div>
 <div class="row justify-content-center">
   <a href="../images/featherwing35-backlight.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-8" data-title="Backlight Control" data-footer="Original image by altersis">
     <img src="../images/featherwing35-backlight.png" class="img-fluid">
@@ -4084,7 +4088,7 @@ please support Adafruit and open-source hardware by purchasing products from Ada
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2024-10-17
+    2024-11-10
   </span>
 
     
